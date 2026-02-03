@@ -14,4 +14,10 @@ class FetchHistory extends HistoryEvent {
     List<Object> get props => [page];
 }
 
+class DeleteHistory extends HistoryEvent {
+    final String id;
+
+    DeleteHistory({required this.id});
+}
+
 class RefreshHistory extends HistoryEvent {}

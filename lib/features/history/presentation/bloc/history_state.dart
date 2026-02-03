@@ -27,3 +27,9 @@ class HistoryError extends HistoryState {
     @override
     List<Object?> get props => [message];
 }
+
+class HistoryDeleteSuccess extends HistoryState {
+    final String message;
+
+    HistoryDeleteSuccess({required this.message});
+}

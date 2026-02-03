@@ -21,13 +21,15 @@ class LoginPage extends StatelessWidget {
 
   final emailCtrl = TextEditingController();
   final passCtrl = TextEditingController();
+  final authLocal = AuthLocalDataSource();
+  late final apiClient = ApiClient(local: authLocal);
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (_) => LoginBloc(
         AuthRepositoryImpl(
-          dio: ApiClient().dio,
+          dio: apiClient.dio,
           local: AuthLocalDataSource(),
         ),
       ),
@@ -48,7 +50,7 @@ class LoginPage extends StatelessWidget {
                     builder: (_) => BlocProvider(
                       create: (_) => HistoryBloc(
                         repository: HistoryRepositoryImpl(
-                          dio: ApiClient().dio,
+                          dio: apiClient.dio,
                         ),
                       )..add(FetchHistory()),
                       child: const HistoryPage(),
