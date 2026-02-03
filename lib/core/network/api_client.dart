@@ -1,16 +1,16 @@
 import 'package:dio/dio.dart';
 
 class ApiClient {
-  late final Dio dio;
+    late final Dio dio;
 
-  ApiClient() {
-    dio = Dio(
-      BaseOptions(
-        baseUrl: 'http://127.0.0.1:5555/api/v1',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-      ),
-    );
-  }
+    ApiClient() {
+        dio = Dio(
+            BaseOptions(
+                baseUrl: 'http://10.0.2.2:4444/api',
+                headers: {
+                  'Content-Type': 'application/json'
+                },
+            ),
+        );
+    }
 }
