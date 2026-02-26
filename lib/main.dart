@@ -1,3 +1,4 @@
+import 'package:aurea/core/organisms/o_bottom_bar.dart';
 import 'package:aurea/features/auth/presentation/pages/login_page.dart';
 import 'package:flutter/material.dart';
 
@@ -33,6 +34,6 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
     @override
     Widget build(BuildContext context) {
-        return LoginPage();
+        return OrganismBottomBar();
     }
 }
