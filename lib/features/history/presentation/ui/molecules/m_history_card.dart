@@ -1,5 +1,5 @@
 
-import 'package:aurea/core/ui/molecules/m_confirmation_dialog.dart';
+import 'package:aurea/core/molecules/m_confirmation_dialog.dart';
 import 'package:aurea/features/history/data/models/history_response.dart';
 import 'package:aurea/features/history/presentation/bloc/history_bloc.dart';
 import 'package:aurea/features/history/presentation/bloc/history_event.dart';

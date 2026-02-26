@@ -17,12 +17,11 @@ class OrganismLoginCard extends StatelessWidget {
     Widget build(BuildContext context) {
         return Container(
             margin: const EdgeInsets.all(spaceMD),
-            padding: const EdgeInsets.all(spaceMD),
             decoration: const BoxDecoration(
-                color: dangerLightColor,
                 borderRadius: BorderRadius.all(Radius.circular(roundedLG))
             ),
             child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                     const Text('Welcome to Aurea', style: TextStyle(fontSize: textXLG, fontWeight: FontWeight.w600)),
                     form,

@@ -7,6 +7,7 @@ import 'package:aurea/features/auth/presentation/bloc/login_event.dart';
 import 'package:aurea/features/auth/presentation/bloc/login_state.dart';
 import 'package:aurea/features/auth/presentation/ui/molecules/m_login_form.dart';
 import 'package:aurea/features/auth/presentation/ui/organisms/o_login_card.dart';
+import 'package:aurea/features/auth/presentation/ui/organisms/o_other_login_card.dart';
 import 'package:aurea/features/history/data/repositories/history_repository_impl.dart';
 import 'package:aurea/features/history/presentation/bloc/history_bloc.dart';
 import 'package:aurea/features/history/presentation/bloc/history_event.dart';
@@ -14,7 +15,7 @@ import 'package:aurea/features/history/presentation/pages/history_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../ui/atoms/a_button.dart';
+import '../../../../core/atoms/a_button.dart';
 
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});
@@ -61,28 +62,40 @@ class LoginPage extends StatelessWidget {
             },
             child: BlocBuilder<LoginBloc, LoginState>(
               builder: (context, state) {
-                return OrganismLoginCard(
-                  form: MoleculeLoginForm(
-                    email: emailCtrl,
-                    password: passCtrl,
-                  ),
-                  error: state is LoginFailure
-                      ? Text(
-                    state.message,
-                    style: const TextStyle(color: Colors.red),
-                  )
-                      : null,
-                  actions: AtomButton(
-                    text: 'Sign In',
-                    onPressed: () {
-                      context.read<LoginBloc>().add(
-                        LoginSubmitted(
-                          email: emailCtrl.text,
-                          password: passCtrl.text,
-                        ),
-                      );
-                    },
-                  ),
+                return Column(
+                  children: [
+                    const SizedBox(height: spaceLG),
+                    const Text("Aurea", style: TextStyle(
+                      color: pinkColor,
+                      fontSize: textJumbo * 3,
+                      fontWeight: FontWeight.w800
+                    )),
+                    const Text("Because Your Skin Deserves More", style: TextStyle(
+                        fontSize: textLG,
+                        fontWeight: FontWeight.w600
+                    )),
+                    const SizedBox(height: spaceJumbo),
+                    OrganismLoginCard(
+                      form: MoleculeLoginForm(
+                        email: emailCtrl,
+                        password: passCtrl,
+                      ),
+                      error: state is LoginFailure ?
+                      Text(state.message, style: const TextStyle(color: Colors.red)) : null,
+                      actions: AtomButton(
+                        text: 'Sign In',
+                        onPressed: () {
+                          context.read<LoginBloc>().add(
+                            LoginSubmitted(
+                              email: emailCtrl.text,
+                              password: passCtrl.text,
+                            ),
+                          );
+                        },
+                      ),
+                    ),
+                    const OrganismOtherLoginCard()
+                  ],
                 );
               },
             ),

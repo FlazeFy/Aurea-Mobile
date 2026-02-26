@@ -1,5 +1,5 @@
 import 'package:aurea/core/global/style.dart';
-import 'package:aurea/features/auth/presentation/ui/atoms/a_input.dart';
+import 'package:aurea/core/atoms/a_input.dart';
 import 'package:flutter/material.dart';
 
 class MoleculeLoginForm extends StatelessWidget {
@@ -10,14 +10,13 @@ class MoleculeLoginForm extends StatelessWidget {
 
     @override
     Widget build(BuildContext context) {
-        return Padding(
-            padding: EdgeInsetsGeometry.symmetric(vertical: spaceSM, horizontal: spaceMD),
-            child: Column(
-                children: [
-                    AtomInput(controller: email, hint: 'Email'),
-                    AtomInput(controller: password, hint: 'Password', obscure: true),
-                ],
-            )
+        return Column(
+            children: [
+                AtomInput(controller: email, hint: 'name@example.com', label: "Email Address"),
+                Container(height: spaceMD),
+                AtomInput(controller: password, hint: 'Enter your password', obscure: true, label: "Password"),
+                Container(height: spaceMD),
+            ]
         );
     }
 }
