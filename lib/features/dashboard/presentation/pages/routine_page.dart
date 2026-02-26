@@ -1,4 +1,5 @@
 import 'package:aurea/features/dashboard/presentation/ui/organisms/o_routine_calendar.dart';
+import 'package:aurea/features/dashboard/presentation/ui/organisms/o_treatment_routines_by_day_list.dart';
 import 'package:flutter/material.dart';
 
 class RoutinePage extends StatelessWidget {
@@ -6,10 +7,16 @@ class RoutinePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenHeight = MediaQuery.of(context).size.height;
+
     return Scaffold(
       body: ListView(
-        children: const [
-          OrganismRoutineCalendar()
+        children: [
+          const OrganismRoutineCalendar(),
+          SizedBox(
+            height: screenHeight,
+            child: const OrganismTreatmentRoutinesByDayList()
+          )
         ],
       ),
     );
