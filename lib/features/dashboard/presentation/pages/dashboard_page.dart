@@ -1,4 +1,5 @@
 import 'package:aurea/features/dashboard/presentation/ui/organisms/o_daily_progress_card.dart';
+import 'package:aurea/features/dashboard/presentation/ui/organisms/o_today_routine_list.dart';
 import 'package:flutter/material.dart';
 
 class DashboardPage extends StatelessWidget {
@@ -12,7 +13,8 @@ class DashboardPage extends StatelessWidget {
       ),
       body: ListView(
         children: [
-          OrganismDailyProgressCard()
+          OrganismDailyProgressCard(),
+          OrganismTodayRoutineList()
         ],
       ),
     );

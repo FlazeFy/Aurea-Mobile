@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 class AtomText extends StatelessWidget {
   final String text;
   final String type;
+  final Color? color;
 
-  const AtomText({super.key, required this.text, required this.type});
+  const AtomText({super.key, required this.text, required this.type, this.color});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,10 @@ class AtomText extends StatelessWidget {
         : FontWeight.w400;
 
     return Text(text,
-        style: TextStyle(fontSize: fontSize, fontWeight: fontWeight)
+        style: TextStyle(
+            fontSize: fontSize,
+            fontWeight: fontWeight,
+            color: color ?? darkColor)
     );
   }
 }
