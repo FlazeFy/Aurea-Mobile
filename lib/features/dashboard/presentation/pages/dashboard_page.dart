@@ -1,3 +1,4 @@
+import 'package:aurea/features/dashboard/presentation/ui/organisms/o_daily_progress_card.dart';
 import 'package:flutter/material.dart';
 
 class DashboardPage extends StatelessWidget {
@@ -9,7 +10,11 @@ class DashboardPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Dashboard'),
       ),
-      body: Column(),
+      body: ListView(
+        children: [
+          OrganismDailyProgressCard()
+        ],
+      ),
     );
   }
 }

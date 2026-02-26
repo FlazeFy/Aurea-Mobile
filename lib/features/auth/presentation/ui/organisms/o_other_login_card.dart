@@ -4,11 +4,7 @@ import 'package:aurea/core/global/style.dart';
 import 'package:flutter/material.dart';
 
 class OrganismOtherLoginCard extends StatelessWidget {
-  final Widget? error;
-
-  const OrganismOtherLoginCard({
-    this.error,
-  });
+  const OrganismOtherLoginCard({super.key});
 
   @override
   Widget build(BuildContext context) {

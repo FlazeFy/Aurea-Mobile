@@ -5,6 +5,7 @@ const Color dangerLightColor = Color(0xFFFFE3F2);
 const Color darkColor = Color(0xFF101709);
 const Color whiteColor = Color(0xFFFFFFF);
 const Color pinkColor = Color(0xFFE064B1);
+const Color lightSuccessColor = Color(0xFFecffe4);
 
 // Spacing
 const double spaceJumbo = 35;
