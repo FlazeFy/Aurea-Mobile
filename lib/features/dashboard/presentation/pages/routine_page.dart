@@ -1,3 +1,4 @@
+import 'package:aurea/features/dashboard/presentation/ui/organisms/o_routine_calendar.dart';
 import 'package:flutter/material.dart';
 
 class RoutinePage extends StatelessWidget {
@@ -6,10 +7,11 @@ class RoutinePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Routine'),
+      body: ListView(
+        children: const [
+          OrganismRoutineCalendar()
+        ],
       ),
-      body: Column(),
     );
   }
 }
