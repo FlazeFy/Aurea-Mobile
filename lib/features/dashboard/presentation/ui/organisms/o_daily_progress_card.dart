@@ -8,7 +8,7 @@ class OrganismDailyProgressCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.all(spaceMD),
+      margin: const EdgeInsets.symmetric(vertical: spaceXSM, horizontal: spaceMD),
       decoration: const BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(roundedLG)),
           color: lightSuccessColor

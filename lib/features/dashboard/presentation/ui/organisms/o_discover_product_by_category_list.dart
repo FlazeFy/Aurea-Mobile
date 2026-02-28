@@ -25,8 +25,9 @@ class OrganismDiscoverProductByCategoryList extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const AtomText(text: 'Browse the Product', type: 'content-title'),
-          SizedBox(
+          Container(
             height: 95,
+            margin: const EdgeInsets.only(top: spaceXXSM),
             child: ListView.builder(
               padding: const EdgeInsets.all(spaceXXSM),
               scrollDirection: Axis.horizontal,

@@ -6,6 +6,8 @@ const Color darkColor = Color(0xFF101709);
 const Color whiteColor = Colors.white;
 const Color pinkColor = Color(0xFFE064B1);
 const Color lightSuccessColor = Color(0xFFecffe4);
+const Color lightWarningColor = Color(0xFFffefc9);
+const Color warningColor = Color(0xFFffae68);
 const Color lightPinkColor = Color(0xFFffe4fd);
 const Color grayColor = Color(0xFF7c7c82);
 
