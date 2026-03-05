@@ -1,3 +1,4 @@
+import 'package:aurea/features/profile/presentation/ui/organisms/o_skin_profile_card.dart';
 import 'package:flutter/material.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -9,7 +10,11 @@ class ProfilePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Profile'),
       ),
-      body: Column(),
+      body: ListView(
+        children: [
+          OrganismSkinProfileCard()
+        ],
+      ),
     );
   }
 }
