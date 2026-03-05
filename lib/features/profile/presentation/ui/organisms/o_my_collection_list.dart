@@ -4,18 +4,17 @@ import 'package:aurea/core/molecules/m_icon_button.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class OrganismDiscoverProductByCategoryList extends StatelessWidget {
-  const OrganismDiscoverProductByCategoryList({super.key});
+class OrganismMyCollectionListList extends StatelessWidget {
+  const OrganismMyCollectionListList({super.key});
 
   @override
   Widget build(BuildContext context) {
     final List<Map<String, dynamic>> skincareCategories = [
-      {'name': 'Toners', 'icon': FontAwesomeIcons.droplet},
-      {'name': 'Moisturizers', 'icon': FontAwesomeIcons.sun},
-      {'name': 'Serums', 'icon': FontAwesomeIcons.vial},
-      {'name': 'Cleansers', 'icon': FontAwesomeIcons.bottleWater},
-      {'name': 'Masks', 'icon': FontAwesomeIcons.mask},
-      {'name': 'Exfoliators', 'icon': FontAwesomeIcons.sprayCan},
+      {'name': '(30) Products', 'icon': FontAwesomeIcons.box},
+      {'name': '(5) Treatments', 'icon': FontAwesomeIcons.briefcaseMedical},
+      {'name': '(4) Template', 'icon': FontAwesomeIcons.boxesStacked},
+      {'name': '(2) Allergic', 'icon': FontAwesomeIcons.handDots},
+      {'name': '(10) Discussion', 'icon': FontAwesomeIcons.comments},
     ];
 
     return Container(
@@ -23,7 +22,7 @@ class OrganismDiscoverProductByCategoryList extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const AtomText(text: 'Browse the Product', type: 'content-title'),
+          const AtomText(text: 'My Collections', type: 'content-title'),
           Container(
             height: 95,
             margin: const EdgeInsets.only(top: spaceXXSM),

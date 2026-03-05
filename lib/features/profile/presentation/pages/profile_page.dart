@@ -1,3 +1,4 @@
+import 'package:aurea/features/profile/presentation/ui/organisms/o_my_collection_list.dart';
 import 'package:aurea/features/profile/presentation/ui/organisms/o_skin_profile_card.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +13,8 @@ class ProfilePage extends StatelessWidget {
       ),
       body: ListView(
         children: [
-          OrganismSkinProfileCard()
+          OrganismSkinProfileCard(),
+          OrganismMyCollectionListList()
         ],
       ),
     );
